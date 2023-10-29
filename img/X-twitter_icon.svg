@@ -1,1 +1,12 @@
-<?xml version="1.0" ?><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1227" viewBox="0 0 1200 1227" fill="none"><g clip-path="url(#clip0_1_2)"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="black"/></g><defs><clipPath id="clip0_1_2"><rect width="1200" height="1227" fill="white"/></clipPath></defs></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svgs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path id="X-twitter" class="cls-1" d="m298.52,213.47L480.56,1.87h-43.14l-158.07,183.74L153.11,1.87H7.5l190.91,277.84L7.5,501.61h43.14l166.92-194.03,133.33,194.03h145.61l-197.99-288.14h.01Zm-59.09,68.68l-19.34-27.67L66.19,34.34h66.26l124.2,177.67,19.34,27.67,161.45,230.94h-66.26l-131.75-188.45h0Z"/>
+</svg>

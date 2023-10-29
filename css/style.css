@@ -1,0 +1,170 @@
+/* APSA Staging Website CSS styling */
+
+
+/* Global Settings */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Header and header container */ 
+
+.header {
+  height: 200px;
+  background-color: rgb(28, 48, 121);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 85%;
+}
+
+
+/* APSA Logo */
+
+.logo-div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-img {
+  height: 150px;
+  filter: invert(100%);
+}
+
+
+/* Upper and Lower Ribbons */
+
+/* Upper Ribbon */
+
+.ribbon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.upper-ribbon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+}
+
+.upper-button-links {
+  text-decoration: none;
+  color: white;
+}
+
+.upper-buttons {
+  padding: 6px 12px;
+  font-size: 16px;
+  margin-left: 10px;
+  background-color: rgb(166, 139, 59);
+  border-radius: 5px;
+}
+
+.upper-buttons:hover {
+  background-color: rgb(4, 10, 63);
+  transition: background-color 0.2s;
+}
+
+.social-media-icon-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px 10px;
+  margin-left: 4px;
+  border-radius: 50%;
+}
+
+.media-icons:hover {
+  background-color: rgb(4, 10, 63);
+  transition: background-color 0.2s;
+}
+
+.media-logos {
+  width: 20px;
+}
+
+/* Lower Ribbon & Dropdown menus */
+
+.lower-ribbon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+}
+
+.lower-buttons {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* Styling the dropdown content and hiding it by default */
+.dropdown {
+  position: relative;
+}
+
+.chevron { 
+  font-size: 12px;
+  margin-left: 7px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(4, 10, 63);
+  width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-links {
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: white;
+}
+
+.lower-buttons:hover {
+  background-color: rgb(166, 139, 59);
+  transition: background-color 0.2s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  top: 100%; /* Position the dropdown below the button */
+  left: 0;
+}
+
+.dropdown-links:hover {
+  background-color: rgb(28, 48, 121);
+  transition: background-color 0.2s;
+}
