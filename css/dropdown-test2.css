@@ -1,0 +1,187 @@
+/* Dropdown testing 2 */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.background {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgb(60, 86, 166); /* rgb(28, 48, 121) */
+  z-index: 10;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+  height: 200px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .container .menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.header .container .menu .ribbon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-picture {
+  vertical-align: middle;
+  height: 150px;
+  filter: invert(100%);
+}
+
+.header .menu .head {
+  display: none;
+}
+
+
+/* Ribbon Settings */
+
+.header .menu .ribbon-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .menu .ribbon-container .ribbon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+/* Upper Ribbon Settings */
+
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.media-logos {
+  width: 25px;
+}
+
+.header .menu .upper-ribbon {
+  margin-top: 5px;
+}
+
+.header .menu .upper-ribbon li > a {
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Lower Ribbon and Dropdown Menu Settings */
+
+.header .menu nav ul {
+  list-style: none;
+}
+
+.header .menu > nav > ul > li {
+  display: inline-block;
+}
+
+.header .menu .ribbon-container > nav > ul > li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header .menu .dropdown {
+  position: relative;
+}
+
+.header .menu a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+  display: block;
+}
+
+.header .menu .ribbon-container > nav > ul > li {
+  padding: 12px 0;
+}
+
+.header .menu .ribbon-container > nav > ul > .dropdown > a {
+  padding-right: 15px;
+}
+
+.header .menu i {
+  font-size: 10px;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  color: white;
+  top: calc(50% - 5px);
+}
+
+.header .menu .ribbon-container > nav > ul > li > i {
+  right: 0;
+}
+
+.header .menu .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(66, 5, 145);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transform-origin: top;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header .menu .sub-menu a {
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.header .menu li:hover > .sub-menu {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.header .menu .sub-menu span {
+  background-image: linear-gradient(white, white);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 3px;
+  transition: background-size 0.3s ease;
+}
+
+.header .menu .sub-menu li:hover > a > span {
+  background-size: 100% 1px;
+}
