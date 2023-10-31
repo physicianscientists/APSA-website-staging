@@ -1,7 +1,7 @@
-/* APSA Staging Website CSS styling */
+/* APSA Staging Website CSS */
 
 
-/* Global Settings */
+/* Universal Settings */ 
 
 *{
   margin: 0;
@@ -10,161 +10,219 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
 
-/* Header and header container */ 
+
+/* Header Background and General Settings */
+
+.background {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
 
 .header {
-  height: 200px;
-  background-color: rgb(28, 48, 121);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 8%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgb(28, 48, 121); /*rgb(60, 86, 166)*/
+  z-index: 10;
 }
 
 .container {
+  max-width: 85%;
+  margin: auto;
+  height: 200px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .container .menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: 85%;
+}
+
+.header .menu .head {  /* Mobile Header */
+  display: none;
+}
+
+.header .menu a {  /* Header text defaults */
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+  display: block;
 }
 
 
-/* APSA Logo */
+/* APSA Logo Settings */
 
-.logo-div {
+.logo {
   display: flex;
   align-items: center;
-  height: 100%;
 }
 
-.logo-img {
+.logo-picture {
+  vertical-align: middle;
   height: 150px;
   filter: invert(100%);
 }
 
 
-/* Upper and Lower Ribbons */
+/* Ribbon Settings */
 
-/* Upper Ribbon */
-
-.ribbon-container {
+.header .menu .ribbon-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
 }
 
-.upper-ribbon {
+.header .menu .ribbon-container .ribbon {
   display: flex;
   flex-direction: row;
   align-items: center;
-  list-style-type: none;
 }
 
-.upper-button-links {
-  text-decoration: none;
-  color: white;
-}
 
-.upper-buttons {
-  padding: 6px 12px;
-  font-size: 16px;
+/* Upper Ribbon Settings */
+
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-left: 10px;
-  background-color: rgb(166, 139, 59);
-  border-radius: 5px;
 }
 
-.upper-buttons:hover {
-  background-color: rgb(4, 10, 63);
+.header .menu .upper-ribbon li {
+  margin-right: 10px;
+}
+
+.header .menu .upper-ribbon li > a {
+  padding: 4px 12px;
+  background-color: rgb(166, 139, 59);
+  border-radius: 6px;
+}
+
+.header .menu .upper-ribbon li > a:hover {
+  background-color: rgb(116, 93, 24);
   transition: background-color 0.2s;
 }
 
-.social-media-icon-container {
+.header .menu .upper-ribbon .social-media-icons a {
   display: flex;
-  flex-direction: row;
-  margin-left: 10px;
-}
-
-.media-icons {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 10px 10px;
-  margin-left: 4px;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 50%;
 }
 
-.media-icons:hover {
+.header .menu .upper-ribbon .social-media-icons a:hover {
   background-color: rgb(4, 10, 63);
   transition: background-color 0.2s;
 }
 
-.media-logos {
-  width: 20px;
+.header .menu .upper-ribbon .social-media-icons > a:not(:last-child) {
+  margin-right: 10px;
 }
 
-/* Lower Ribbon & Dropdown menus */
 
-.lower-ribbon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  list-style-type: none;
+/* Lower Ribbon and Dropdown Menu Settings */
+
+.header .menu nav ul {
+  list-style: none;
 }
 
-.lower-buttons {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  color: white;
-  font-size: 20px;
-  padding: 6px 12px;
-  border-radius: 5px;
-  margin-left: 12px;
-  cursor: pointer;
+.header .menu > nav > ul > li {
+  display: inline-block;
 }
 
-/* Styling the dropdown content and hiding it by default */
-.dropdown {
+.header .menu .ribbon-container .lower-ribbon > li > a {
+  font-size: 18px;
+}
+
+.header .menu .ribbon-container .lower-ribbon > li:not(:last-child) {
+  margin-right: 30px;
+}
+
+/*.header .menu .ribbon-container > nav > ul > li:not(:last-child) {
+  margin-right: 30px;
+}*/
+
+.header .menu .dropdown {
   position: relative;
 }
 
-.chevron { 
-  font-size: 12px;
-  margin-left: 7px;
+.header .menu .ribbon-container > nav > ul > li {
+  padding: 12px 0;
 }
 
-.dropdown-content {
-  display: none;
+.header .menu .ribbon-container > nav > ul > .dropdown > a {
+  padding-right: 15px;
+}
+
+.header .menu i {
+  font-size: 10px;
+  pointer-events: none;
+  user-select: none;
   position: absolute;
-  background-color: rgb(4, 10, 63);
-  width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-links {
-  padding: 12px 16px;
-  display: block;
-  text-align: left;
-  text-decoration: none;
   color: white;
+  top: calc(50% - 5px);
 }
 
-.lower-buttons:hover {
-  background-color: rgb(166, 139, 59);
-  transition: background-color 0.2s;
+.header .menu .ribbon-container > nav > ul > li > i {
+  right: 0;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-  top: 100%; /* Position the dropdown below the button */
+.header .menu .sub-menu {
+  position: absolute;
+  top: 100%;
   left: 0;
+  background-color: rgb(4, 10, 63);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transform-origin: top;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
 }
 
-.dropdown-links:hover {
+.header .menu .sub-menu a {
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.header .menu .lower-ribbon li:hover > .sub-menu {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.header .menu .lower-ribbon .sub-menu span {
+  background-image: linear-gradient(white, white);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 3px;
+  transition: background-size 0.3s ease;
+}
+
+.header .menu .lower-ribbon .sub-menu li:hover {
   background-color: rgb(28, 48, 121);
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
+}
+
+.header .menu .lower-ribbon .sub-menu li:hover > a > span {
+  background-size: 100% 1px;
 }

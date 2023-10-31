@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>APSA Staging Website</title>
 
+  <!-- Video Reference: https://www.youtube.com/watch?v=WQJeaQyA5NM&t=629s -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 <body>
 
@@ -17,64 +16,143 @@
 
     <div class="container">
 
-      <!-- APSA Logo -->
-      <div class="logo-div">
-        <img src="img/APSA_Logo_Black.png" alt="APSA logo" class="logo-img">
+      <!-- Desktop APSA Logo -->
+      <div class="logo">
+        <img class="logo-picture" src="img/APSA_Logo_Black.png" alt="apsa logo">
       </div>
 
-      <!-- Ribbons -->
-      <div class="ribbon-container">
+      <!-- Menu -->
+      <div class="menu">
 
-        <!-- Upper Ribbon -->
-        <nav>
-          <ul class="upper-ribbon">
-            <!-- Upper Buttons -->
-            <li class="upper-buttons"><a class="upper-button-links" href="#">Members Only</a></li>
-            <li class="upper-buttons"><a class="upper-button-links" href="#">Engage</a></li>
-            <li class="upper-buttons"><a class="upper-button-links" href="#">Contact Us</a></li>
-            <li class="upper-buttons"><a class="upper-button-links" href="#">Sign In</a></li>
+        <!-- Mobile APSA Logo -->
+        <div class="head">
+          <div class="logo"><img class="logo-picture" src="img/APSA_Logo_Black.png" alt="apsa logo"></div>
+          <button type="button" class="close-menu-btn"></button>
+        </div>
+        
+        <!-- Header Buttons -->
+        <div class="ribbon-container">
 
-            <!-- Social Media Icons -->
-            <div class="social-media-icon-container">
-              <a class="media-icons" href="#"><img class="media-logos" src="img/search_icon.svg" alt="search"></a>
-              <a class="media-icons" href="#"><img class="media-logos" src="img/facebook_icon.svg" alt="facebook"></a>
-              <a class="media-icons" href="#"><img class="media-logos" src="img/instagram_icon.svg" alt="instagram"></a>
-              <a class="media-icons" href="#"><img class="media-logos" src="img/linkedin_icon.svg" alt="linkedin"></a>
-              <a class="media-icons" href="#"><img class="media-logos" src="img/X-twitter_icon.svg" alt="X-twitter"></a>
-              <a class="media-icons" href="#"><img class="media-logos" src="img/youtube_icon.svg" alt="youtube"></a>
-            </div>
-          </ul>
-        </nav>
-
-        <!-- Lower Ribbon -->
-        <nav>
-          <ul class="lower-ribbon">
-            <div class="dropdown">
-              <button class="lower-buttons">
-                About <span class="chevron">&#9660;</span>
-              </button>
-              <div class="dropdown-content">
-                <a class="dropdown-links" href="#">Mission & Goals</a>
-                <a class="dropdown-links" href="#">History</a>
-                <a class="dropdown-links" href="#">Awards</a>
-                <a class="dropdown-links" href="#">Partners & Sponsors</a>
-                <a class="dropdown-links" href="#">Physician Scientist Training</a>
+          <!-- Upper Ribbon & Social Medias -->
+          <nav>
+            <ul class="ribbon upper-ribbon">
+              <!-- Upper Buttons -->
+              <li><a href="#">Members Only</a></li>
+              <li><a href="#">Engage</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Sign In</a></li>
+  
+              <!-- Social Media Icons -->
+              <div class="social-media-icons">
+                <a href="#"><img class="media-logos" src="img/search_icon.svg" alt="search"></a>
+                <a href="#"><img class="media-logos" src="img/facebook_icon.svg" alt="facebook"></a>
+                <a href="#"><img class="media-logos" src="img/instagram_icon.svg" alt="instagram"></a>
+                <a href="#"><img class="media-logos" src="img/linkedin_icon.svg" alt="linkedin"></a>
+                <a href="#"><img class="media-logos" src="img/X-twitter_icon.svg" alt="X-twitter"></a>
+                <a href="#"><img class="media-logos" src="img/youtube_icon.svg" alt="youtube"></a>
               </div>
-            </div>
+            </ul>
+          </nav>
+  
+          <!-- Lower Ribbon: Dropdown Menus -->
+          <nav>
+            <ul class="ribbon lower-ribbon">
+              <!-- About Dropdown -->
+              <li class="dropdown">
+                <a href="#">About</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="sub-menu">
+                  <li><a href="#"><span>Mission & Goals</span></a></li>
+                  <li><a href="#"><span>History</span></a></li>
+                  <li><a href="#"><span>Awards</span></a></li>
+                  <li><a href="#"><span>Partners & Supporters</span></a></li>
+                  <li><a href="#"><span>Physician Scientist Training</span></a></li>
+                </ul>
+              </li>
+    
+              <!-- Leadership Dropdown -->
+              <li class="dropdown">
+                <a href="#">Leadership</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="sub-menu">
+                  <li><a href="#"><span>Organiziational Structure</span></a></li>
+                  <li><a href="#"><span>Executive Counsil</span></a></li>
+                  <li><a href="#"><span>Board of Directors</span></a></li>
+                  <li><a href="#"><span>Local Chapters</span></a></li>
+                  <li><a href="#"><span>Institutional Representatives</span></a></li>
+                </ul>
+              </li>
+    
+              <!-- Membership Dropdown -->
+              <li class="dropdown">
+                <a href="#">Membership</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="sub-menu">
+                  <li><a href="#"><span>Categories</span></a></li>
+                  <li><a href="#"><span>Benefits</span></a></li>
+                </ul>
+              </li>
+    
+              <!-- Events Dropdown -->
+              <li class="dropdown">
+                <a href="#">Events</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="sub-menu">
+                  <li><a href="#"><span>Calendar</span></a></li>
+                  <li><a href="#"><span>Interactive Sessions</span></a></li>
+                  <li><a href="#"><span>AAP/ASCI/APSA Joint Meeting</span></a></li>
+                  <li><a href="#"><span>APSA Regional Meetings</span></a></li>
+                  <li><a href="#"><span>Diversity Summit</span></a></li>
+                </ul>
+              </li>
+    
+              <!-- Advocacy Dropdown -->
+              <li class="dropdown">
+                <a href="#">Advocacy</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="sub-menu">
+                  <li><a href="#"><span>Initiatives</span></a></li>
+                  <li><a href="#"><span>Policy Statements</span></a></li>
+                  <li><a href="#"><span>Resolution Process</span></a></li>
+                </ul>
+              </li>
+    
+              <!-- Resources Dropdown -->
+              <li class="dropdown">
+                <a href="#">Resources</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <ul class="sub-menu">
+                  <li><a href="#"><span>Undergraduate & Postbac</span></a></li>
+                  <li><a href="#"><span>Medical & Graduate</span></a></li>
+                  <li><a href="#"><span>Resident & Fellow</span></a></li>
+                </ul>
+              </li>
+    
+            </ul>
+          </nav>
 
-            <button class="lower-buttons">Leadership</button>
-            <button class="lower-buttons">Membership</button>
-            <button class="lower-buttons">Events</button>
-            <button class="lower-buttons">Advocacy</button>
-            <button class="lower-buttons">Resources</button>
-          </ul>
-        </nav>
-
-      </div>
+        </div>
+  
+        <!-- Right Menu -->
+        <!--
+        <div class="header-right">
+          <button type="button" class="search-btn icon-btn"><i class="fa-solid fa-search"></i></button>
+          <button type="button" class="cart-btn icon-btn"><i class="fa-solid fa-shopping-cart"></i></button>
+          <button type="button" class="open-menu-btn">
+            <span class="line line-1"></span>
+            <span class="line line-1"></span>
+            <span class="line line-1"></span>
+          </button>
+        </div>
+        -->
+        </div>
 
     </div>
 
   </header>
+
+  <!-- Background -->
+  <section class="background"></section>
 
 </body>
 </html>
