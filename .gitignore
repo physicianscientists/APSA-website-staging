@@ -1,0 +1,7 @@
+# Ignoring dropdown testing
+dropdown-test.html
+css/dropdown-test.css
+
+# Ignoring zip file of project
+APSA-website-staging-main.zip
+
