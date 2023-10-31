@@ -1,4 +1,7 @@
-/* Dropdown testing 2 */
+/* APSA Staging Website CSS */
+
+
+/* Universal Settings */ 
 
 *{
   margin: 0;
@@ -10,6 +13,9 @@
 body {
   overflow: hidden;
 }
+
+
+/* Header Background and General Settings */
 
 .background {
   min-height: 100vh;
@@ -23,7 +29,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: rgb(60, 86, 166); /* rgb(28, 48, 121) */
+  background-color: rgb(28, 48, 121); /*rgb(60, 86, 166)*/
   z-index: 10;
 }
 
@@ -43,11 +49,20 @@ body {
   flex-direction: row;
 }
 
-.header .container .menu .ribbon-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
+.header .menu .head {  /* Mobile Header */
+  display: none;
 }
+
+.header .menu a {  /* Header text defaults */
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+  display: block;
+}
+
+
+/* APSA Logo Settings */
 
 .logo {
   display: flex;
@@ -60,16 +75,14 @@ body {
   filter: invert(100%);
 }
 
-.header .menu .head {
-  display: none;
-}
-
 
 /* Ribbon Settings */
 
 .header .menu .ribbon-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
 }
 
 .header .menu .ribbon-container .ribbon {
@@ -85,19 +98,43 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 10px;
 }
 
-.media-logos {
-  width: 25px;
-}
-
-.header .menu .upper-ribbon {
-  margin-top: 5px;
+.header .menu .upper-ribbon li {
+  margin-right: 10px;
 }
 
 .header .menu .upper-ribbon li > a {
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4px 12px;
+  background-color: rgb(166, 139, 59);
+  border-radius: 6px;
+}
+
+.header .menu .upper-ribbon li > a:hover {
+  background-color: rgb(116, 93, 24);
+  transition: background-color 0.2s;
+}
+
+
+.header .menu .upper-ribbon .social-media-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+}
+
+.header .menu .upper-ribbon .social-media-icons a:hover {
+  background-color: rgb(4, 10, 63);
+  transition: background-color 0.2s;
+}
+
+.header .menu .upper-ribbon .social-media-icons > a:not(:last-child) {
+  margin-right: 10px;
 }
 
 
@@ -111,20 +148,20 @@ body {
   display: inline-block;
 }
 
-.header .menu .ribbon-container > nav > ul > li:not(:last-child) {
+.header .menu .ribbon-container .lower-ribbon > li > a {
+  font-size: 18px;
+}
+
+.header .menu .ribbon-container .lower-ribbon > li:not(:last-child) {
   margin-right: 30px;
 }
 
+/*.header .menu .ribbon-container > nav > ul > li:not(:last-child) {
+  margin-right: 30px;
+}*/
+
 .header .menu .dropdown {
   position: relative;
-}
-
-.header .menu a {
-  text-decoration: none;
-  font-size: 16px;
-  color: white;
-  line-height: 1.5;
-  display: block;
 }
 
 .header .menu .ribbon-container > nav > ul > li {
@@ -152,7 +189,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgb(66, 5, 145);
+  background-color: rgb(4, 10, 63);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1;
   transform-origin: top;
@@ -166,14 +203,14 @@ body {
   white-space: nowrap;
 }
 
-.header .menu li:hover > .sub-menu {
+.header .menu .lower-ribbon li:hover > .sub-menu {
   opacity: 1;
   transform: none;
   visibility: visible;
   transition: all 0.3s ease;
 }
 
-.header .menu .sub-menu span {
+.header .menu .lower-ribbon .sub-menu span {
   background-image: linear-gradient(white, white);
   background-size: 0 1px;
   background-repeat: no-repeat;
@@ -182,6 +219,11 @@ body {
   transition: background-size 0.3s ease;
 }
 
-.header .menu .sub-menu li:hover > a > span {
+.header .menu .lower-ribbon .sub-menu li:hover {
+  background-color: rgb(28, 48, 121);
+  transition: background-color 0.3s;
+}
+
+.header .menu .lower-ribbon .sub-menu li:hover > a > span {
   background-size: 100% 1px;
 }
