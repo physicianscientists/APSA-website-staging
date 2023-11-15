@@ -69,27 +69,9 @@ body {
   justify-content: center;
 }
 
-/*
-.logo > p {
-  color: white;
-  font-family: "Bookman Old Style", Georgia, serif;
-}
-
-.APSA {
-  font-size: 84px;
-  letter-spacing: -8px;
-  line-height: 0.9;
-}
-
-.APSA_text {
-  font-size: 20px;
-  text-align: center;
-}
-*/
-
 .logo-picture {
   vertical-align: middle;
-  height: 126px;
+  height: 118px;
 }
 
 
@@ -113,24 +95,34 @@ body {
 }
 
 .header .menu .ribbon-container > nav > ul > li {
+  /* Padding for lower buttons */
   padding: 12px 0;
 }
 
 
 /* Upper Ribbon Settings */
 
-.upper-ribbon li {
+.upper-ribbon {
+  padding-top: 12px;
+}
+
+.upper-ribbon .upper-button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.upper-ribbon .upper-button-container li {
   margin-right: 10px;
 }
 
-.upper-ribbon li > a {
+.upper-ribbon .upper-button-container li > a {
   font-size: 15px;
   padding: 4px 10px;
   background-color: rgb(166, 139, 59);
   border-radius: 6px;
 }
 
-.upper-ribbon li > a:hover {
+.upper-ribbon .upper-button-container li > a:hover {
   background-color: rgb(116, 93, 24);
   transition: background-color 0.2s;
 }
@@ -142,21 +134,22 @@ body {
   margin-left: 10px;
 }
 
-.media-logos {
-  width: 20px;
-}
-
-/*.media-logos:hover {
-  filter: drop-shadow(0 0 5px yellow);
-}*/
-
-.upper-ribbon .social-media-icons a {
+.upper-ribbon .social-media-icons > a {
   display: flex;
+  width: 34px;
+  padding: 7px;
 }
 
 .upper-ribbon .social-media-icons > a:not(:last-child) {
-  margin-right: 12px;
+  margin-right: 7px;
 }
+
+.upper-ribbon .social-media-icons > a:hover {
+  background-color: rgb(4, 10, 63);
+  border-radius: 100%;
+  transition: background-color 0.2s;
+}
+
 
 
 /* Lower Ribbon and Dropdown Menu Settings */
@@ -235,4 +228,181 @@ body {
 
 .header .menu .lower-ribbon .sub-menu li:hover > a > span {
   background-size: 100% 1px;
+}
+
+
+
+/* Media Queries for Mobile */
+
+@media(max-width:1100px) {
+  .header .container {
+    max-width: 95%;
+  }
+}
+
+
+@media(max-width:1000px) {
+
+  /* General Mobile Settings */
+
+  .header {
+    padding: 12px 0;
+  }
+
+  .header .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background-color: rgb(28, 48, 121);
+    padding: 15px 10px 10px;
+    overflow-y: auto;
+    z-index: 1;
+    /*transform: translate(100%);*/
+  }
+
+  .header .container .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header .menu .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    width: 97%;
+  }
+  
+
+  /* Logo Settings */
+
+  .header .menu .head .logo-picture {
+    height: 80px;
+  }
+
+
+  /* Close Menu Button */
+
+  .header .menu .close-menu-btn {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+  .header .menu .close-menu-btn::before,
+  .header .menu .close-menu-btn::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: white;
+  }
+  .header .menu .close-menu-btn::before {
+    transform: rotate(45deg);
+  }
+  .header .menu .close-menu-btn::after {
+    transform: rotate(-45deg);
+  }
+
+
+  /* Ribbon Settings */
+  .header .menu .ribbon-container {
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /*start*/
+  }
+  
+  .header .menu .ribbon-container .upper-ribbon {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .social-media-icons {
+    margin: 0 0 15px 0;
+  }
+
+  .header .menu .ribbon-container .upper-ribbon .upper-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .menu .ribbon-container .upper-ribbon .upper-button-container li {
+    margin: 0 0 10px 0;
+  }
+
+
+
+  /* Lower Ribbon Settings */
+
+  .header .menu .ribbon-container .lower-ribbon {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+
+  .header .menu .lower-ribbon li {
+    margin: 0 0 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .header .menu .lower-ribbon li:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .header .menu .lower-ribbon > ul > li > a {
+    padding: 12px 0;
+  }
+
+  .header .menu .lower-ribbon > ul > .dropdown > a {
+    padding-right: 34px;
+  }
+
+  .header .menu .lower-ribbon i {
+    height: 34px;
+    width: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    cursor: pointer;
+    top: 7px;
+  }
+  
+  .header .menu .lower-ribbon .sub-menu {
+    position: static;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    padding: 0;
+    transition: none;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+  }
+
+  .header .menu .lower-ribbon .sub-menu li:last-child {
+    border: none;
+  }
+
+  .header .menu .lower-ribbon .sub-menu a {
+    padding: 12px 0 12px 15px;
+  }
+
+  .header .menu .lower-ribbon .sub-menu i {
+    transform: none;
+    right: 0;
+  }
+
+  .header
+  
+
 }
